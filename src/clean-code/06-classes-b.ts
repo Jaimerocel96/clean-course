@@ -23,6 +23,9 @@
     interface UserProps {
         email       : string;
         role        : string;
+        name        : string;
+        gender      : Gender;
+        birthdate   : Date;
     }
 
     class User extends Person {
@@ -36,7 +39,7 @@
             name,
             gender,
             birthdate,
-        } : UserProps & PersonProps
+        } : UserProps
         ){
             super({name, gender, birthdate});
             this.lastAccess = new Date();
@@ -52,6 +55,11 @@
     interface UserSettingsProps{
         workingDirectory: string;
         lastOpenFolder:   string;
+        email       : string;
+        role        : string;
+        name        : string;
+        gender      : Gender;
+        birthdate   : Date;
     }
 
     class UserSettings extends User {
